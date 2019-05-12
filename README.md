@@ -6,6 +6,7 @@ The user can store expenses and income by running the script.
 
 The user can review and look where he is spending a lot of money.
 Expenses are into different categories. They are:
+
 	1. Food
 	2. Travel
 	3. Bills
