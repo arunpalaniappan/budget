@@ -32,9 +32,11 @@ def main(user_name):
                                          "\n4. Grossery"
                                          "\n5. Shopping"
                                          "\n6. Clothing"
-                                         "\n7. Other Expense"
+                                         "\n7. Education"
+                                         "\n8. Other Expense"
                                          "\nMake your choice: "
                                     )   )
+            #Add a try except Value error block
             expense_amount = float(input("Enter expense: "))
             note = input("Note: ")
             if expense_category == 1:
@@ -56,6 +58,9 @@ def main(user_name):
                 db_access.expense(user_name, expense_amount, "Clothing" ,note)
                 db_access.update_balance(user_name,expense_amount,"expense")
             elif expense_category == 7:
+                db_access.expense(user_name, expense_amount, "Education" ,note)
+                db_access.update_balance(user_name,expense_amount,"expense")
+            elif expense_category == 8:
                 db_access.expense(user_name, expense_amount, "Other expense" ,note)
                 db_access.update_balance(user_name,expense_amount,"expense")
             else:
