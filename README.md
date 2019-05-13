@@ -6,6 +6,7 @@ The user can store expenses and income by running the script.
 
 The user can review and look where he is spending a lot of money.
 Expenses are into different categories. They are:
+
 	1. Food
 	2. Travel
 	3. Bills
@@ -22,6 +23,7 @@ Planning to use bar graph here. One bar for income and a stacked bar for expense
 Weekly review is same as monthly review, except that it is for last 7 days.
 
 What I have done:
+
 	1. Back end has 3 data bases ( mongo collections ).
 			user_details : Contains user name and password for every user.
 							Used during login to verify password.
@@ -31,6 +33,7 @@ What I have done:
 						We query this database to find the ecpenses.
 
 What is yet to be done:
+
 	1. To make the code self explanatory ( add comments, meaningful names ).
 	2. Review - Plot graphs for review.
 	3. Delete Account script which will delete the user details.
