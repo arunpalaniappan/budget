@@ -1,4 +1,3 @@
-#import mongo
 import db_access
 import expense_noter
 

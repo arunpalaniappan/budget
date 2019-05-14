@@ -1,4 +1,6 @@
 import db_access
+import delete_account
+import review
 
 def main(user_name):
 
@@ -9,7 +11,8 @@ def main(user_name):
         "\n2. Expense"
         "\n3. Get balance"
         "\n4. Review and Prediction"
-        "\n5. Exit"
+        "\n5. Delete Account"
+        "\n6. Exit"
         "\nGive your choice: "
         )
         )
@@ -78,6 +81,8 @@ def main(user_name):
             review.make_prediction(user_name)
 
         elif basic_choice == 5:
+            delete_account.delete_account(user_name)
+        elif basic_choice == 6:
             exit()
         else:
             print ("Invalid choice")

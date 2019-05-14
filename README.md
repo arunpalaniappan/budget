@@ -35,8 +35,11 @@ What I have done:
 What is yet to be done:
 
 	1. To make the code self explanatory ( add comments, meaningful names ).
-	2. Review - Plot graphs for review.
-	3. Delete Account script which will delete the user details.
-	4. Backup option which will write the data into a excel file or store it in a human readable format.
+	2. Review - Plot graphs for review. ( Use seaborn ) ( Generate test records for review )
+	3. Backup option which will write the data into a excel file or store it in a human readable format.
+	4. Add Exception Handling
 
 Requiring your kind contribution.
+
+Test username:  test
+Password:		test

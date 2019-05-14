@@ -1,6 +1,6 @@
 """
 
-Write functions in alphabetical order.
+Order functions in alphabetical order.
 
 """
 
@@ -11,6 +11,20 @@ def get_db():
     client = pymongo.MongoClient("mongodb://localhost:27017/")
     db = client['budget_analyzer']
     return (db)
+
+def delete_account(user_name):
+    db = get_db()
+    db.user_details.delete_one({"user_name":user_name})    
+    db.balance.delete_one({"user_name":user_name})
+    db.expense_tracker.delete_many({"user_name":user_name})
+    
+    if db.user_details.count_documents({"user_name":user_name}) != 0 or \
+       db.balance.count_documents({"user_name":user_name}) != 0 or \
+       db.expense_tracker.count_documents({"user_name":user_name}) != 0:
+        return 0        
+    else:
+        return 1
+    
 
 def get_date():
     import datetime as dt
