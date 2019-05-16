@@ -73,7 +73,7 @@ def check_user_name(user_name):
     else:
         return False
     
-def expense(user_name,expense,category,note):
+def expense(user_name,expense,category,note,day=get_date()[0],month=get_date()[1],year=get_date()[2]):
     import dateutil.parser
     #print ('In mongo expense is ',expense,' category ',category)
     day,month,year = get_date()
@@ -82,10 +82,9 @@ def expense(user_name,expense,category,note):
     db.expense_tracker.insert( { "user_name":user_name,"date":date,"expense":int(expense),"category":category,"note":note})
     return 1
 
-def income(user_name,amount,note):
+def income(user_name,amount,note,day=get_date()[0],month=get_date()[1],year=get_date()[2]):
     import dateutil.parser
     #print ('In mongo income is ',expense)
-    day,month,year = get_date()
     db = get_db()
     date = dateutil.parser.parse(str(year)+"-"+str(month)+"-"+str(day))  #Year month day order
     db.expense_tracker.insert( { "user_name":user_name,"date":date,"income":float(amount),"note":note})
@@ -132,4 +131,3 @@ def sign_up(user_name,password):
     db.user_details.insert({"user_name":user_name,"password":password})
     print ("Sign Up Successful")
     return 1
-     
