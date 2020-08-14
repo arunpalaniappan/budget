@@ -1,4 +1,4 @@
-# budget
+# Budget Analyzer
 
 Budget Analyzer is an application which can be used to keep track of person's money flow ( income and expense ).
 
@@ -25,12 +25,12 @@ Weekly review is same as monthly review, except that it is for last 7 days.
 What I have done:
 
 	1. Back end has 3 data bases ( mongo collections ).
-			user_details : Contains user name and password for every user.
-							Used during login to verify password.
-			balance: Contains user name and balance.
-						Used in get balance function.
-			expense_tracker: Contains the incomes and expenses.
-						We query this database to find the ecpenses.
+		user_details : Contains user name and password for every user.
+				Used during login to verify password.
+		balance: Contains user name and balance.
+				Used in get balance function.
+		expense_tracker: Contains the incomes and expenses.
+				We query this database to find the ecpenses.
 
 What is yet to be done:
 
@@ -39,7 +39,8 @@ What is yet to be done:
 	3. Backup option which will write the data into a excel file or store it in a human readable format.
 	4. Add Exception Handling
 
-Requiring your kind contribution.
 
 Test username:  test
 Password:		test
+
+Requiring your kind contribution.
