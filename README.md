@@ -42,5 +42,3 @@ What is yet to be done:
 
 Test username:  test
 Password:		test
-
-Requiring your kind contribution.
